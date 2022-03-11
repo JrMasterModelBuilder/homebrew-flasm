@@ -1,4 +1,4 @@
-name: main
+name: flasm-macos-10.15
 
 on:
   push:
