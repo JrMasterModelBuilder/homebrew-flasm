@@ -5,6 +5,8 @@ class Flasm < Formula
   version "1.64"
   sha256 "bb37695bccc8c03616b877779c6d659005f5ad0f2d6d0ab3937c38b2c0c6fa58"
 
+  uses_from_macos "gperf" => :build
+
   def install
     inreplace "Makefile", "keywords.gperf >", "--size-type=size_t keywords.gperf >"
     inreplace "flasm.c",
