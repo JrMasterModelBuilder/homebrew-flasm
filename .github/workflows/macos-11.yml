@@ -1,4 +1,4 @@
-name: flasm-ubuntu-20.04
+name: macOS 11
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         config:
-          - host: ubuntu-20.04
+          - host: macos-11
             name: flasm
             test: 1
 

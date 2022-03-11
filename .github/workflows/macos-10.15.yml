@@ -1,4 +1,4 @@
-name: flasm-macos-11
+name: macOS 10.15
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         config:
-          - host: macos-11
+          - host: macos-10.15
             name: flasm
             test: 1
 
