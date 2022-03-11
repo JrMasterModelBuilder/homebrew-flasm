@@ -11,6 +11,7 @@ class Flasm < Formula
     if OS.mac?
       inreplace "Makefile", "keywords.gperf >", "--size-type=size_t keywords.gperf >"
     end
+    inreplace "unflasm.c", "swfVersion", "_swfVersion"
     inreplace "flasm.c",
       "(iniFile = fopen(inipath, \"r\")) == NULL",
       "(iniFile = fopen(inipath, \"r\")) == NULL && (iniFile = fopen(\"#{etc}/flasm.ini\", \"r\")) == NULL"
