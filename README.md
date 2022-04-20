@@ -1,6 +1,6 @@
 # Homebrew flasm
 
-Hombrew tap for flasm
+Homebrew tap for flasm
 
 [![Build Status](https://github.com/JrMasterModelBuilder/homebrew-flasm/workflows/macOS%2011/badge.svg?branch=main)](https://github.com/JrMasterModelBuilder/homebrew-flasm/actions?query=workflow%3AmacOS%2011+branch%3Amain)
 
