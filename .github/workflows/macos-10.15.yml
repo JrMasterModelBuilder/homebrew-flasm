@@ -1,5 +1,7 @@
 name: macOS 10.15
 
+on: push
+
 jobs:
   build:
     strategy:

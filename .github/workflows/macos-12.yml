@@ -1,5 +1,7 @@
 name: macOS 12
 
+on: push
+
 jobs:
   build:
     strategy:
