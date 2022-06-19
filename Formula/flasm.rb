@@ -1,7 +1,7 @@
 class Flasm < Formula
   desc "Flash command-line assembler and disassembler"
   homepage "https://www.nowrap.de/flasm.html"
-  url "http://www.nowrap.de/download/flasm16src.zip"
+  url "https://github.com/JrMasterModelBuilder/homebrew-flasm/releases/download/sources/flasm16src.1.64.zip"
   version "1.64"
   sha256 "bb37695bccc8c03616b877779c6d659005f5ad0f2d6d0ab3937c38b2c0c6fa58"
 

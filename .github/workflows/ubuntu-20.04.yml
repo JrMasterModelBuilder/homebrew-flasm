@@ -1,10 +1,5 @@
 name: Ubuntu 20.04
 
-on:
-  push:
-  schedule:
-    - cron: '0 8 * * 6'
-
 jobs:
   build:
     strategy:
