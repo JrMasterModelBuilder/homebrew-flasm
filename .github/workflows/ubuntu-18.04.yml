@@ -23,7 +23,7 @@ jobs:
       - name: Tap Dir
         run: mkdir -p "$(brew --repo)/Library/Taps/$(dirname "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')"
 
-      - name: Tap Install
+      - name: Tap Link
         run: ln -s "$PWD" "$(brew --repo)/Library/Taps/$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')"
 
       - name: Taps
