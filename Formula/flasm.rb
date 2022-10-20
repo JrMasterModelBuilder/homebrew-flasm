@@ -8,9 +8,7 @@ class Flasm < Formula
   uses_from_macos "gperf" => :build
 
   def install
-    if OS.mac?
-      inreplace "Makefile", "keywords.gperf >", "--size-type=size_t keywords.gperf >"
-    end
+    inreplace "Makefile", "keywords.gperf >", "--size-type=size_t keywords.gperf >" if OS.mac?
     inreplace "unflasm.c", "swfVersion", "_swfVersion"
     inreplace "flasm.c",
       "(iniFile = fopen(inipath, \"r\")) == NULL",
