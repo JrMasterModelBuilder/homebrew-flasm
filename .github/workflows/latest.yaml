@@ -16,16 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Check Latest
-        run: |
-          page="$(curl -f -L -s 'http://www.nowrap.de/flasm.html')"
-          source='http://www.nowrap.de/download/flasm16src.zip'
-          tempfile="/tmp/$(grep -o '[^/]*$' <<< "${source}")"
-          if [[ "${page}" != *"${source}"* ]]; then
-            echo "Source not on page"
-            exit 1
-          fi
-          curl -f -L -o "${tempfile}" "${source}"
-          shasum -c <<< "bb37695bccc8c03616b877779c6d659005f5ad0f2d6d0ab3937c38b2c0c6fa58 *${tempfile}"
+        run: ./test/latest.sh
 
       - name: Keep Alive
         uses: gautamkrishnar/keepalive-workflow@v1
