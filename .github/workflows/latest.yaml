@@ -1,0 +1,27 @@
+name: Latest
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    if: github.repository == 'JrMasterModelBuilder/homebrew-flasm'
+
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Check Latest
+        run: |
+          curl -f -L -o /tmp/flasm16src.zip http://www.nowrap.de/download/flasm16src.zip
+          shasum -c <<< 'bb37695bccc8c03616b877779c6d659005f5ad0f2d6d0ab3937c38b2c0c6fa58 */tmp/flasm16src.zip'
+
+      - name: Keep Alive
+        uses: gautamkrishnar/keepalive-workflow@v1
+        with:
+          commit_message: ${{ env.KA_COMMIT_MESSAGE }}
+          committer_username: ${{ env.KA_COMMIT_USER }}
+          committer_email: ${{ secrets.KA_COMMIT_EMAIL }}
