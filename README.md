@@ -17,12 +17,12 @@ Homebrew tap for flasm
 
 ## Tap
 
-```
-$ brew tap JrMasterModelBuilder/flasm
+```sh
+brew tap JrMasterModelBuilder/flasm
 ```
 
 ## Install
 
-```
-$ brew install flasm
+```sh
+brew install flasm
 ```
