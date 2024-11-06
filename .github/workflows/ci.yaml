@@ -16,8 +16,7 @@ jobs:
           - ubuntu-22.04
           - ubuntu-20.04
         name: 
-          - libming-stable
-          - libming-head
+          - flasm
 
     name: ${{ matrix.host }} ${{ matrix.name }}
 
