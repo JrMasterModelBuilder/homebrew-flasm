@@ -8,6 +8,7 @@ Homebrew tap for flasm
 
 ```sh
 brew tap JrMasterModelBuilder/flasm
+brew trust JrMasterModelBuilder/flasm
 ```
 
 ## Install
