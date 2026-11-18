@@ -61,6 +61,10 @@ jobs:
       - name: Test
         run: brew test "${{ matrix.name }}"
 
-      - name: Debug
+      - name: Temp Data
         if: always()
-        run: find /tmp/brewtemp
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: build-artifacts
+          path: /tmp/brewtemp
+          include-hidden-files: true
