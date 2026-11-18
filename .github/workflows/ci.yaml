@@ -45,7 +45,7 @@ jobs:
         run: brew info "${{ matrix.name }}"
 
       - name: Install
-        run: brew install -v "${{ matrix.name }}"
+        run: brew install --build-from-source --verbose --keep-tmp "${{ matrix.name }}"
 
       - name: Installed
         run: brew info "${{ matrix.name }}"
@@ -55,3 +55,7 @@ jobs:
 
       - name: Test
         run: brew test "${{ matrix.name }}"
+
+      - name: Debug
+        if: always()
+        run: find "$TMPDIR"
