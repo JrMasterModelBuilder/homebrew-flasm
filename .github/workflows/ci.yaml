@@ -46,6 +46,8 @@ jobs:
 
       - name: Install
         run: brew install --build-from-source --verbose --keep-tmp "${{ matrix.name }}"
+        env:
+          TMPDIR: /tmp/homebrew
 
       - name: Installed
         run: brew info "${{ matrix.name }}"
@@ -58,4 +60,4 @@ jobs:
 
       - name: Debug
         if: always()
-        run: env
+        run: find /tmp/homebrew
