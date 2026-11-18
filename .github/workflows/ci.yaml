@@ -58,4 +58,4 @@ jobs:
 
       - name: Debug
         if: always()
-        run: find "$TMPDIR"
+        run: env
